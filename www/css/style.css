@@ -192,6 +192,7 @@ h1 {
 .switch_container {
   width: 100%;
   float: left;
+  margin-bottom: 10px;
 }
 
 .switch_container .form_label {
@@ -236,4 +237,12 @@ h1 {
 
 .item-toggle, .item-toggle.item-complex .item-content {
   padding-right: 70px !important;
+}
+
+.slider-pager-page {
+  color: #fff !important;
+}
+
+.slider-pager-page.active {
+  color: #fff !important;
 }
