@@ -1,0 +1,43 @@
+<ion-view view-title="Browse">
+  <ion-header-bar class="bar-stable header">
+    <div class="header_icon"></div>
+  </ion-header-bar>
+
+  <ion-content class="app_background" ng-controller="AppController">
+
+
+    <div class="lead_form">
+      <h1>Lead Page</h1>
+      <div class="form_column_left">
+        <input type="text" class="form_input" placeholder="Topic" ng-model="topic">
+        <input type="text" class="form_input" placeholder="First Name" ng-model="firstName">
+        <input type="text" class="form_input" placeholder="Surname" ng-model="surname">
+        <input type="text" class="form_input" placeholder="Job Title" ng-model="job">
+        <input type="text" class="form_input" placeholder="Telephone" ng-model="telephone">
+        <input type="text" class="form_input" placeholder="Email" ng-model="email">
+      </div>
+      <div class="form_column_center">
+        <input type="text" class="form_input" placeholder="Lead Source" ng-model="lead">
+        <input type="text" class="form_input" placeholder="Company" ng-model="company">
+        <input type="text" class="form_input" placeholder="Industry" ng-model="industry">
+        <input type="text" class="form_input" placeholder="Website" ng-model="website">
+
+        <input type="text" class="form_input" placeholder="Address Line 1" ng-model="address">
+        <input type="text" class="form_input" placeholder="Post Code" ng-model="postcode">
+        <input type="text" class="form_input" placeholder="City" ng-model="city">
+
+      </div>
+      <div class="form_column_right">
+        <input type="text" class="form_input" placeholder="Number of Office Staff" ng-model="staff">
+        <input type="text" class="form_input" placeholder="Number of Operatives" ng-model="operatives">
+        <textarea class="form_textarea" ng-model="notes" ng-init="notes='Additional Notes'"></textarea>
+        <div class="button_area">
+          <div class="button top_margin" ng-click="leadButtonFinish()">Finish</div>
+          <div class="button bottom_none" ng-click="feedbackButton()">Go to Feedback</div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>

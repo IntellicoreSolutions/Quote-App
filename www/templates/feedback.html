@@ -1,0 +1,97 @@
+<ion-view view-title="Browse" ng-controller="AppController">
+
+  <ion-header-bar class="bar-stable header">
+    <div class="header_icon"></div>
+  </ion-header-bar>
+
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" >
+    <ion-slide>
+      <ion-content class="app_background">
+
+        <form class="feedback_form">
+          <h1>Tell us what you think!</h1>
+          <!-- <div class="form_column_left">
+             <label class="form_label">Do you think the solution is easy to use?</label>
+             <textarea class="form_textarea"></textarea>
+             <label class="form_label">Does the solution manage the right level of data required by your organisation?</label>
+             <textarea class="form_textarea"></textarea>
+           </div>
+           <div class="form_column_right">
+             <label class="form_label">Is it clear as to how your company would benefit from the solution and where the return on investment would come from?</label>
+             <textarea class="form_textarea"></textarea>
+             <label class="form_label">Any Other Comments</label>
+             <textarea class="form_textarea"></textarea>
+             <div class="button" ng-click="leadButtonFinish()">Finish</div>
+           </div> -->
+
+
+          <div class="form_column_left">
+            <div class="switch_container">
+              <label class="form_label">Do you currently have a job management back office system in place?</label>
+              <ion-toggle ng-model="system" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>
+            </div>
+
+            <input type="text" class="form_input" placeholder="Current software/system currently used?" ng-model="jupi">
+            <input type="text" class="form_input" placeholder="Cost of current system?" ng-model="jupi2">
+
+            <label class="item item-input item-select form_dropdown ">
+              <div class="input-label select_label">How do you pay?</div>
+              <select>
+                <option>Yearly</option>
+                <option>One off</option>
+                <option>Monthly</option>
+                <option>Biannually</option>
+                <option>Quarterly</option>
+              </select>
+            </label>
+
+            <textarea class="form_textarea" ng-model="systemNotes" ng-init="systemNotes='Additional Comments?'"></textarea>
+
+
+            <div class="switch_container">
+              <label class="form_label">Would you like a follow up demo?<br></label>
+              <ion-toggle ng-model="demo" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>
+            </div>
+
+            <div class="date_container">
+              <label class="form_label">1st Preferred Date?<br></label>
+              <input type="date" class="form_input">
+            </div>
+            <div class="date_container">
+              <label class="form_label">2nd Preferred Date?<br></label>
+              <input type="date" class="form_input">
+            </div>
+
+
+
+          </div>
+          <div class="form_column_right">
+            <div class="switch_container">
+              <label class="form_label">Did you like the UI?<br></label>
+              <ion-toggle ng-model="ui" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>
+            </div>
+
+            <textarea class="form_textarea" ng-model="uiComments" ng-init="systemNotes='Additional Comments?'"></textarea>
+
+            <div class="switch_container">
+              <label class="form_label">Did the process make sense?<br></label>
+              <ion-toggle ng-model="sense" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>
+            </div>
+
+            <textarea class="form_textarea" ng-model="senseComments" ng-init="systemNotes='Additional Comments?'"></textarea>
+
+          </div>
+        </form>
+      </ion-content>
+    </ion-slide>
+    <ion-slide>
+      <div class="box yellow"><h1>YELLOW</h1></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box pink"><h1>PINK</h1></div>
+    </ion-slide>
+  </ion-slide-box>
+
+
+
+</ion-view>
