@@ -195,12 +195,18 @@ h1 {
 }
 
 .switch_container .form_label {
-  width:70%;
+  width: auto;
   float: left;
+  max-width: 70%;
+}
+
+.platform-ios .switch_container .form_label {
+  padding-top: 10px !important;
 }
 
 .switch_container .custom_toggle {
-  float: right;
+  /*float: right;*/
+  float: left;
 }
 
 .date_container {
@@ -222,4 +228,12 @@ h1 {
   background-repeat: no-repeat !important;
   background-position: center center !important;
 
+}
+
+.item-toggle .toggle {
+  top: 4px !important;
+}
+
+.item-toggle, .item-toggle.item-complex .item-content {
+  padding-right: 70px !important;
 }
