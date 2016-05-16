@@ -211,7 +211,7 @@ h1 {
 }
 
 .date_container {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   width: 45%;
   float: left;
   margin-right: 4%;
@@ -245,4 +245,16 @@ h1 {
 
 .slider-pager-page.active {
   color: #fff !important;
+}
+
+
+.long-input-label {
+  display: block;
+  padding: 7px 10px 7px 0px;
+  max-width: none;
+  font-size: 14px;
+  overflow: hidden;
+  width: 247px !important;
+  white-space: normal;
+  text-align: left;
 }
