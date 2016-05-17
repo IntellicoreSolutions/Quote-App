@@ -89,4 +89,56 @@ angular.module('starter.controllers', [])
     $scope.startAgainButton = function() {
       $window.location.href = '#/lead';
     }
+
+
+    //Hide / show feedback input based on value
+
+    $scope.showSystem = function(system) {
+      if (system == 1) {
+        $scope.showSys = true;
+      } else {
+        $scope.showSys = false;
+      }
+    }
+
+    $scope.showDemo = function(demo) {
+      if (demo == 1) {
+        $scope.showDem = true;
+      } else {
+        $scope.showDem = false;
+      }
+    }
+
+    $scope.showUI = function(ui) {
+      if (ui == 0) {
+        $scope.showU = true;
+      } else {
+        $scope.showU = false;
+      }
+    }
+
+    $scope.showSense = function(sense) {
+      if (sense == 0) {
+        $scope.showSen = true;
+      } else {
+        $scope.showSen = false;
+      }
+    }
+
+    $scope.showProcess = function(process) {
+      if (process == 1) {
+        $scope.showPro = true;
+      } else {
+        $scope.showPro = false;
+      }
+    }
+
+    $scope.showFeatures = function(features) {
+      if (features == 1) {
+        $scope.showFeat = true;
+      } else {
+        $scope.showFeat  = false;
+      }
+    }
+
   });
