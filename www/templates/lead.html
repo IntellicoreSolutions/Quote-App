@@ -10,11 +10,11 @@
       <h1>Lead Page</h1>
       <div class="form_column_left">
         <!--<input type="text" class="form_input" placeholder="Topic" ng-model="topic">-->
-        <textarea class="form_textarea" ng-model="topic" placeholder="Topic" maxlength="300"></textarea>
+        <textarea class="form_textarea" placeholder="Topic" ng-model="topic" maxlength="300"></textarea>
         <input type="text" class="form_input" placeholder="First Name" ng-model="firstName" maxlength="50" >
         <input type="text" class="form_input" placeholder="Surname" ng-model="surname"  maxlength="50">
         <input type="text" class="form_input" placeholder="Job Title" ng-model="job" maxlength="100">
-        <input type="text" class="form_input" placeholder="Telephone" ng-model="telephone" maxlength="20">
+        <input type="number" class="form_input" placeholder="Telephone" ng-model="telephone" maxlength="20">
         <input type="text" class="form_input" placeholder="Email" ng-model="email" maxlength="100">
       </div>
       <div class="form_column_center">
@@ -27,8 +27,8 @@
         <input type="text" class="form_input" placeholder="Post Code" ng-model="postcode" maxlength="20">
       </div>
       <div class="form_column_right">
-        <input type="text" class="form_input" placeholder="Number of Office Staff" ng-model="staff">
-        <input type="text" class="form_input" placeholder="Number of Operatives" ng-model="operatives">
+        <input type="number" class="form_input" placeholder="Number of Office Staff" ng-model="staff">
+        <input type="number" class="form_input" placeholder="Number of Operatives" ng-model="operatives">
         <textarea class="form_textarea" ng-model="notes" placeholder="Additional Notes"></textarea>
         <div class="button_area">
           <div class="button top_margin" ng-click="leadButtonFinish()">Finish</div>
