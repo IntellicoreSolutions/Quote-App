@@ -62,6 +62,7 @@
               <!--<ion-toggle ng-model="demo" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
             <!--</div>-->
 
+            <div class="button bottom_none back_button" ng-click="startAgainButton()">Back</div>
 
 
 
@@ -188,8 +189,9 @@
               <div class="input-label select_label">Would you utilise tablets or phones?</div>
               <select ng-model="mobile">
                 <option value="">Please Select...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
+                <option value="tablets">Tablets</option>
+                <option value="phones">Phones</option>
+                <option value="both">Both</option>
               </select>
             </label>
 
@@ -205,6 +207,7 @@
 
           </div>
         </form>
+
 
       </ion-content>
     </ion-slide>
