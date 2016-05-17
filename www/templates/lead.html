@@ -9,23 +9,22 @@
     <div class="lead_form">
       <h1>Lead Page</h1>
       <div class="form_column_left">
-        <input type="text" class="form_input" placeholder="Topic" ng-model="topic">
-        <input type="text" class="form_input" placeholder="First Name" ng-model="firstName">
-        <input type="text" class="form_input" placeholder="Surname" ng-model="surname">
-        <input type="text" class="form_input" placeholder="Job Title" ng-model="job">
-        <input type="text" class="form_input" placeholder="Telephone" ng-model="telephone">
-        <input type="text" class="form_input" placeholder="Email" ng-model="email">
+        <!--<input type="text" class="form_input" placeholder="Topic" ng-model="topic">-->
+        <textarea class="form_textarea" ng-model="topic" placeholder="Topic" maxlength="300"></textarea>
+        <input type="text" class="form_input" placeholder="First Name" ng-model="firstName" maxlength="50" >
+        <input type="text" class="form_input" placeholder="Surname" ng-model="surname"  maxlength="50">
+        <input type="text" class="form_input" placeholder="Job Title" ng-model="job" maxlength="100">
+        <input type="text" class="form_input" placeholder="Telephone" ng-model="telephone" maxlength="20">
+        <input type="text" class="form_input" placeholder="Email" ng-model="email" maxlength="100">
       </div>
       <div class="form_column_center">
         <input type="text" class="form_input" placeholder="Lead Source" ng-model="lead">
-        <input type="text" class="form_input" placeholder="Company" ng-model="company">
+        <input type="text" class="form_input" placeholder="Company" ng-model="company" maxlength="100">
         <input type="text" class="form_input" placeholder="Industry" ng-model="industry">
-        <input type="text" class="form_input" placeholder="Website" ng-model="website">
-
-        <input type="text" class="form_input" placeholder="Address Line 1" ng-model="address">
-        <input type="text" class="form_input" placeholder="Post Code" ng-model="postcode">
-        <input type="text" class="form_input" placeholder="City" ng-model="city">
-
+        <input type="text" class="form_input" placeholder="Website" ng-model="website" maxlength="200">
+        <input type="text" class="form_input" placeholder="Street" ng-model="street" maxlength="250">
+        <input type="text" class="form_input" placeholder="City" ng-model="city" maxlength="80">
+        <input type="text" class="form_input" placeholder="Post Code" ng-model="postcode" maxlength="20">
       </div>
       <div class="form_column_right">
         <input type="text" class="form_input" placeholder="Number of Office Staff" ng-model="staff">

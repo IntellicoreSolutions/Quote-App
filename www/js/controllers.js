@@ -28,6 +28,26 @@ angular.module('starter.controllers', [])
         notes: $scope.notes,
       }
 
+
+      var feedback = {
+        topic: $scope.topic,
+        firstName: $scope.firstName,
+        lastName: $scope.surname,
+        jobTitle: $scope.job,
+        telephone: $scope.telephone,
+        email: $scope.email,
+        leadSource: $scope.lead,
+        company: $scope.company,
+        industry: $scope.industry,
+        website: $scope.website,
+        street: $scope.address,
+        postcode: $scope.postcode,
+        city: $scope.city,
+        employees: $scope.staff,
+        operatives: $scope.operatives,
+        notes: $scope.notes,
+      }
+
        console.log(form);
 
       $http({
