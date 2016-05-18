@@ -1,217 +1,166 @@
-<ion-view view-title="Browse" ng-controller="AppController">
+<ion-view view-title="Browse">
 
-  <ion-header-bar class="bar-stable header">
-    <div class="header_icon"></div>
-  </ion-header-bar>
+    <ion-header-bar class="bar-stable header">
+        <div class="header_icon"></div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" class="slider_background">
+            <ion-slide>
 
-  <ion-slide-box on-slide-changed="slideHasChanged($index)" class="slider_background">
-    <ion-slide>
-      <ion-content>
-        <form class="feedback_form">
-          <h1>Tell us what you think!</h1>
-          <!-- <div class="form_column_left">
-             <label class="form_label">Do you think the solution is easy to use?</label>
-             <textarea class="form_textarea"></textarea>
-             <label class="form_label">Does the solution manage the right level of data required by your organisation?</label>
-             <textarea class="form_textarea"></textarea>
-           </div>
-           <div class="form_column_right">
-             <label class="form_label">Is it clear as to how your company would benefit from the solution and where the return on investment would come from?</label>
-             <textarea class="form_textarea"></textarea>
-             <label class="form_label">Any Other Comments</label>
-             <textarea class="form_textarea"></textarea>
-             <div class="button" ng-click="leadButtonFinish()">Finish</div>
-           </div> -->
+                <div class="feedback_form">
+                    <h1>Tell us what you think!</h1>
 
+                    <div class="form_column_left">
+                        <label class="item item-input item-select form_dropdown ">
+                            <div class="input-label select_label long-input-label">Do you currently have a job
+                                management back office system in place?
+                            </div>
+                            <select ng-model="system" ng-change="showSystem(system)">
+                                <option value="">Please Select...</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </label>
 
-          <div class="form_column_left">
-            <!--<div class="switch_container">-->
-              <!--<label class="form_label">Do you currently have a job management back office system in place?</label>-->
-              <!--<ion-toggle ng-model="system" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
-            <!--</div>-->
+                        <input type="text" class="form_input" placeholder="Current software/system currently used?"
+                               ng-model="systemName" maxlength="100" ng-show="showSys">
+                        <input type="number" class="form_input" placeholder="Cost of current system? (£)"
+                               ng-model="systemCost" ng-show="showSys">
 
-            <label class="item item-input item-select form_dropdown ">
-              <div class="input-label select_label long-input-label">Do you currently have a job management back office system in place?</div>
-              <select ng-model="system" ng-change="showSystem(system)">
-                <option value="">Please Select...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </label>
+                        <label class="item item-input item-select form_dropdown " ng-show="showSys">
+                            <div class="input-label select_label">How do you pay?</div>
+                            <select ng-model="systemPayment">
+                                <option value="">Please Select...</option>
+                                <option value="1000000">One off</option>
+                                <option value="1000001">Monthly</option>
+                                <option value="1000002">Quarterly</option>
+                                <option value="1000003">Biannually</option>
+                                <option value="1000004">Annually</option>
 
-            <input type="text" class="form_input" placeholder="Current software/system currently used?" ng-model="systemName" maxlength="100" ng-show="showSys">
-            <input type="number" class="form_input" placeholder="Cost of current system? (£)" ng-model="systemCost" ng-show="showSys">
+                            </select>
+                        </label>
 
-            <label class="item item-input item-select form_dropdown " ng-show="showSys">
-              <div class="input-label select_label">How do you pay?</div>
-              <select ng-model="systemPayment">
-                <option value="">Please Select...</option>
-                <option value="yearly">Yearly</option>
-                <option value="oneOff">One off</option>
-                <option value="monthly">Monthly</option>
-                <option value="biannually">Biannually</option>
-                <option value="quarterly">Quarterly</option>
-              </select>
-            </label>
+                        <textarea class="form_textarea" ng-model="systemNotes" placeholder="Additional Comments?"
+                                  ng-show="showSys"></textarea>
 
-            <textarea class="form_textarea" ng-model="systemNotes" placeholder="Additional Comments?" ng-show="showSys"></textarea>
+                        <div class="button bottom_none back_button" ng-click="startAgainButton()">Back</div>
 
+                    </div>
+                    <div class="form_column_right">
+                        <label class="item item-input item-select form_dropdown ">
+                            <div class="input-label select_label">Would you like a follow up demo?</div>
+                            <select ng-model="demo" ng-change="showDemo(demo)">
+                                <option value="">Please Select...</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </label>
 
-            <!--<div class="switch_container">-->
-              <!--<label class="form_label">Would you like a follow up demo?<br></label>-->
-              <!--<ion-toggle ng-model="demo" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
-            <!--</div>-->
-
-            <div class="button bottom_none back_button" ng-click="startAgainButton()">Back</div>
-
-
-
-          </div>
-          <div class="form_column_right">
-            <!--<div class="switch_container">-->
-              <!--<label class="form_label">Did you like the UI?<br></label>-->
-              <!--<ion-toggle ng-model="ui" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
-            <!--</div>-->
-
-            <label class="item item-input item-select form_dropdown ">
-              <div class="input-label select_label">Would you like a follow up demo?</div>
-              <select ng-model="demo" ng-change="showDemo(demo)">
-                <option value="">Please Select...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </label>
-
-            <div class="date_container" ng-show="showDem">
-              <label class="form_label">1st Preferred Date?<br></label>
-              <input type="date" class="form_input" ng-model="date1">
-            </div>
-            <div class="date_container" ng-show="showDem">
-              <label class="form_label">2nd Preferred Date?<br></label>
-              <input type="date" class="form_input" ng-model="date2">
-            </div>
+                        <div class="date_container" ng-show="showDem">
+                            <label class="form_label">1st Preferred Date?<br></label>
+                            <input type="date" class="form_input" ng-model="date1">
+                        </div>
+                        <div class="date_container" ng-show="showDem">
+                            <label class="form_label">2nd Preferred Date?<br></label>
+                            <input type="date" class="form_input" ng-model="date2">
+                        </div>
 
 
-            <label class="item item-input item-select form_dropdown ">
-              <div class="input-label select_label">Did you like the UI?</div>
-              <select ng-model="ui" ng-change="showUI(ui)">
-                <option value="">Please Select...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </label>
+                        <label class="item item-input item-select form_dropdown ">
+                            <div class="input-label select_label">Did you like the UI?</div>
+                            <select ng-model="ui" ng-change="showUI(ui)">
+                                <option value="">Please Select...</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </label>
 
             <textarea class="form_textarea" ng-model="uiComments"
                       placeholder="Additional Comments?" ng-show="showU"></textarea>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide ng-controller="AppController">
+                <div class="feedback_form">
+                    <h1>Tell us what you think!</h1>
+                    <div class="form_column_left">
+                        <div class="switch_container">
 
-            <!--<div class="switch_container">-->
-              <!--<label class="form_label">Did the process make sense?<br></label>-->
-              <!--<ion-toggle ng-model="sense" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
-            <!--</div>-->
-
-
-          </div>
-        </form>
-      </ion-content>
-    </ion-slide>
-    <ion-slide>
-      <ion-content>
-        <form class="feedback_form">
-          <h1>Tell us what you think!</h1>
-          <div class="form_column_left">
-            <div class="switch_container">
-
-              <label class="item item-input item-select form_dropdown ">
-                <div class="input-label select_label">Did the process make sense?</div>
-                <select ng-model="sense" ng-change="showSense(sense)">
-                  <option value="">Please Select...</option>
-                  <option value="1">Yes</option>
-                  <option value="0">No</option>
-                </select>
-              </label>
+                            <label class="item item-input item-select form_dropdown ">
+                                <div class="input-label select_label">Did the process make sense?</div>
+                                <select ng-model="sense" ng-change="showSense(sense)">
+                                    <option value="">Please Select...</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </label>
 
             <textarea class="form_textarea" ng-model="senseComments"
                       placeholder="Additional Comments?" ng-show="showSen"></textarea>
 
-              <!--<label class="form_label">Any part of the process you wouldn't use?</label>-->
-              <!--<ion-toggle ng-model="process" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
-            </div>
+                        </div>
 
-            <label class="item item-input item-select form_dropdown ">
-              <div class="input-label select_label long-input-label">Any part of the process you wouldn't use?</div>
-              <select ng-model="process" ng-change="showProcess(process)">
-                <option value="">Please Select...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </label>
+                        <label class="item item-input item-select form_dropdown ">
+                            <div class="input-label select_label long-input-label">Any part of the process you wouldn't
+                                use?
+                            </div>
+                            <select ng-model="process" ng-change="showProcess(process)">
+                                <option value="">Please Select...</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </label>
 
-            <textarea class="form_textarea" ng-model="processNotes"
+            <textarea class="form_textarea" ng-model="processComments"
                       placeholder="Additional Comments?" ng-show="showPro"></textarea>
 
+                    </div>
 
+                    <div class="form_column_right">
 
+                        <label class="item item-input item-select form_dropdown ">
+                            <div class="input-label select_label long-input-label">Any features you would like added?
+                            </div>
+                            <select ng-model="features" ng-change="showFeatures(features)">
+                                <option value="">Please Select...</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </label>
 
-          </div>
-          <div class="form_column_right">
-
-            <!--<div class="switch_container">-->
-              <!--<label class="form_label">Any features you would like added?</label>-->
-              <!--<ion-toggle ng-model="features" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
-            <!--</div>-->
-            <label class="item item-input item-select form_dropdown ">
-              <div class="input-label select_label long-input-label">Any features you would like added?</div>
-              <select ng-model="features" ng-change="showFeatures(features)">
-                <option value="">Please Select...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </label>
-
-            <textarea class="form_textarea" ng-model="featuresNotes"
+            <textarea class="form_textarea" ng-model="featuresComments"
                       placeholder="Additional Comments?" ng-show="showFeat"></textarea>
 
-            <!--<div class="switch_container">-->
-              <!--<label class="form_label">Any part of the process you wouldn't use?</label>-->
-              <!--<ion-toggle ng-model="process" class="custom_toggle toggle-big" toggle-class="toggle-big"></ion-toggle>-->
-            <!--</div>-->
-
-            <!--<label class="item item-input item-select form_dropdown ">-->
-              <!--<div class="input-label select_label long-input-label">Any part of the process you wouldn't use?</div>-->
-              <!--<select ng-model="process">-->
-                <!--<option value="">Please Select...</option>-->
-                <!--<option value="1">Yes</option>-->
-                <!--<option value="0">No</option>-->
-              <!--</select>-->
-            <!--</label> -->
-
-            <label class="item item-input item-select form_dropdown ">
-              <div class="input-label select_label">Would you utilise tablets or phones?</div>
-              <select ng-model="mobile">
-                <option value="">Please Select...</option>
-                <option value="tablets">Tablets</option>
-                <option value="phones">Phones</option>
-                <option value="both">Both</option>
-              </select>
-            </label>
+                        <label class="item item-input item-select form_dropdown ">
+                            <div class="input-label select_label">Would you utilise tablets or phones?</div>
+                            <select ng-model="mobile">
+                                <option value="">Please Select...</option>
+                                <option value="1000000">Tablets</option>
+                                <option value="1000001">Phones</option>
+                                <option value="1000002">Both</option>
+                            </select>
+                        </label>
 
 
-            <label class="item item-input item-select form_dropdown ">
-              <div class="input-label select_label">Do you have a SIM contract in-place?</div>
-              <select ng-model="sim">
-                <option value="">Please Select...</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </label>
+                        <!--<label class="item item-input item-select form_dropdown ">-->
+                            <!--<div class="input-label select_label">Do you have a SIM contract in-place?</div>-->
+                            <!--<select ng-model="sim">-->
+                                <!--<option value="">Please Select...</option>-->
+                                <!--<option value="1">Yes</option>-->
+                                <!--<option value="0">No</option>-->
+                            <!--</select>-->
+                        <!--</label>-->
 
-          </div>
-        </form>
+                    </div>
 
+                    <div class="button_area">
+                        <div class="button top_margin" ng-click="finish()">Finish</div>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
 
-      </ion-content>
-    </ion-slide>
-  </ion-slide-box>
 </ion-view>
 
 
