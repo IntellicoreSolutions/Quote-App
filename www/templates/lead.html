@@ -18,9 +18,63 @@
         <input type="text" class="form_input" placeholder="Email" ng-model="email" maxlength="100">
       </div>
       <div class="form_column_center">
-        <input type="text" class="form_input" placeholder="Lead Source" ng-model="lead">
+        <!--<input type="text" class="form_input" placeholder="Lead Source" ng-model="lead">-->
+        <label class="item item-input item-select form_dropdown ">
+          <div class="input-label select_label long-input-label">Lead Source?</div>
+          <select ng-model="lead">
+            <option value="">Please Select...</option>
+            <option value="1">Advertisement</option>
+            <option value="2">Employee Referral</option>
+            <option value="3">External Referral</option>
+            <option value="4">Partner</option>
+            <option value="5">Press Release</option>
+            <option value="6">Seminar</option>
+            <option value="7">Trade Show</option>
+            <option value="8">Web</option>
+            <option value="9">Word Of Mouth</option>
+            <option value="10">Other</option>
+          </select>
+        </label>
         <input type="text" class="form_input" placeholder="Company" ng-model="company" maxlength="100">
-        <input type="text" class="form_input" placeholder="Industry" ng-model="industry">
+        <!--<input type="text" class="form_input" placeholder="Industry" ng-model="industry">-->
+        <label class="item item-input item-select form_dropdown ">
+          <div class="input-label select_label long-input-label">Industry?</div>
+          <select ng-model="industry">
+            <option value="">Please Select...</option>
+            <option value="1">Accounting</option>
+            <option value="2">Agriculture</option>
+            <option value="3">Broadcasting</option>
+            <option value="4">Brokers</option>
+            <option value="5">Building Supply retail</option>
+            <option value="6">Business Services</option>
+            <option value="7">Consulting</option>
+            <option value="8">Consumer Services</option>
+            <option value="9">Design</option>
+            <option value="10">Distributors</option>
+            <option value="11">Doctor's Offices</option>
+            <option value="12">Durable Manufacturing</option>
+            <option value="13">Eating and Drinking</option>
+            <option value="14">Equipment Retail</option>
+            <option value="15">Financial</option>
+            <option value="16">Food and Tobacco</option>
+            <option value="17">Inbound Capital</option>
+            <option value="18">Inbound Repair</option>
+            <option value="19">Insurance</option>
+            <option value="20">Legal Services</option>
+            <option value="21">Non-Durable Merchandise</option>
+            <option value="22">Outbound Consumer Service</option>
+            <option value="23">Petrochemical</option>
+            <option value="24">Service Retail</option>
+            <option value="25">SIG Affiliations</option>
+            <option value="26">Social Services</option>
+            <option value="27">Special Outbound</option>
+            <option value="28">Speciality Realty</option>
+            <option value="29">Transportation</option>
+            <option value="30">Utility Creation</option>
+            <option value="31">Vehicle Retail</option>
+            <option value="32">Wholesale</option>
+          </select>
+        </label>
         <input type="text" class="form_input" placeholder="Website" ng-model="website" maxlength="200">
         <input type="text" class="form_input" placeholder="Street" ng-model="street" maxlength="250">
         <input type="text" class="form_input" placeholder="City" ng-model="city" maxlength="80">
