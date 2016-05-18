@@ -273,6 +273,10 @@ h1 {
   padding: 5px 30px !important;
 }
 
+.platform-ios .back_button {
+  top: 9px;
+}
+
 .finish_button {
   float:none;
   position: absolute;
