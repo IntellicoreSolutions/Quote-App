@@ -120,7 +120,7 @@ h1 {
   /*-o-transform: translate(-50%, -50%);*/
   /*transform: translate(-50%, -50%);*/
 
-  width: 90%;
+  width: 95%;
   position: relative;
   margin: auto;
   padding-top: 90px;
@@ -264,8 +264,18 @@ h1 {
 }
 
 .back_button {
+  position: absolute;
+  right: 2.5%;
+  top: 18px;
+  font-size: 18px !important;
+  border-color: #00b0b7 !important;
+  font-weight: bold !important;
+  padding: 5px 30px !important;
+}
+
+.finish_button {
   float:none;
   position: absolute;
-  left: 5%;
-  bottom: 5%;
+  right: 2.5%;
+  bottom: 2.5%;
 }
