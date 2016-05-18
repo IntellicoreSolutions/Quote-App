@@ -171,6 +171,7 @@ h1 {
 
 .scroll {
   /*transform: none !important;*/
+  height: 100%;
 }
 
 .custom_toggle {
@@ -195,7 +196,7 @@ h1 {
 .switch_container {
   width: 100%;
   float: left;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
 }
 
 .switch_container .form_label {
@@ -265,6 +266,6 @@ h1 {
 .back_button {
   float:none;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 5%;
+  bottom: 5%;
 }
