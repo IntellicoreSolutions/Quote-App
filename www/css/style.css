@@ -221,7 +221,7 @@ h1 {
 }
 
 .slider-slide {
-  height: 100vh
+  height: calc(100vh - 64px);
 }
 
 .slider_background {
