@@ -52,6 +52,24 @@ angular.module('starter.controllers', [])
         //console.log(data, status);
 
         $rootScope.callbackUser = data;
+
+        $scope.topic = null;
+        $scope.firstName = null;
+        $scope.surname = null;
+        $scope.job = null;
+        $scope.telephone = null;
+        $scope.email = null;
+        $scope.lead = null;
+        $scope.company = null;
+        $scope.industry = null;
+        $scope.website = null;
+        $scope.street = null;
+        $scope.postcode = null;
+        $scope.city = null;
+        $scope.staff = null;
+        $scope.operatives = null;
+        $scope.notes = null;
+
         $window.location.href = '#/feedback';
 
       }).error(function (data, status, header, config) {
@@ -120,13 +138,31 @@ angular.module('starter.controllers', [])
 
         $ionicLoading.hide();
         console.log(data, status);
+
+        $scope.system = null;
+        $scope.systemName = null;
+        $scope.systemCost = null;
+        $scope.systemPayment = null;
+        $scope.systemNotes = null;
+        $scope.demo = null;
+        $scope.date1 = null;
+        $scope.date2 = null;
+        $scope.ui = null;
+        $scope.uiComments = null;
+        $scope.sense = null;
+        $scope.senseComments = null;
+        $scope.process = null;
+        $scope.processComments = null;
+        $scope.features = null;
+        $scope.featuresComments = null;
+        scope.mobile = null;
+
         $window.location.href = '#/lead';
 
       }).error(function (data, status, header, config) {
 
         $ionicLoading.hide();
         console.log(data, status);
-
       });
 
     }
