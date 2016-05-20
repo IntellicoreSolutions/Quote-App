@@ -32,11 +32,11 @@
                             <div class="input-label select_label">How do you pay?</div>
                             <select ng-model="systemPayment">
                                 <option value="">Please Select...</option>
-                                <option value="1000000">One off</option>
-                                <option value="1000001">Monthly</option>
-                                <option value="1000002">Quarterly</option>
-                                <option value="1000003">Biannually</option>
-                                <option value="1000004">Annually</option>
+                                <option value="100000000">One off</option>
+                                <option value="100000001">Monthly</option>
+                                <option value="100000002">Quarterly</option>
+                                <option value="100000003">Biannually</option>
+                                <option value="100000004">Annually</option>
 
                             </select>
                         </label>
@@ -79,7 +79,11 @@
             <textarea class="form_textarea" ng-model="uiComments"
                       placeholder="Additional Comments?" ng-show="showU"></textarea>
                     </div>
+
+
+
                 </div>
+                <button ng-click="nextSlide()" data-tap-disabled="true" class="button next_button">Next ></button>
             </ion-slide>
             <ion-slide ng-controller="AppController">
                 <div class="feedback_form">
@@ -136,9 +140,9 @@
                             <div class="input-label select_label">Would you utilise tablets or phones?</div>
                             <select ng-model="mobile">
                                 <option value="">Please Select...</option>
-                                <option value="1000000">Tablets</option>
-                                <option value="1000001">Phones</option>
-                                <option value="1000002">Both</option>
+                                <option value="100000000">Tablets</option>
+                                <option value="100000001">Phones</option>
+                                <option value="100000002">Both</option>
                             </select>
                         </label>
 
@@ -158,6 +162,7 @@
                         <div class="button top_margin" ng-click="finish()">Finish</div>
                     </div>
                 </div>
+                <button ng-click="previousSlide()" data-tap-disabled="true" class="button previous_button">< Previous</button>
             </ion-slide>
         </ion-slide-box>
 

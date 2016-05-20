@@ -1,6 +1,9 @@
 angular.module('starter.controllers', [])
 
-  .controller('AppController', function($scope, $ionicModal, $timeout, $window, $ionicPopup, $http, $ionicLoading, $ionicSlideBoxDelegate) {
+  .controller('AppController', function($scope, $ionicModal, $timeout, $window, $ionicPopup, $http, $ionicLoading, $ionicSlideBoxDelegate, $rootScope) {
+
+    $rootScope.callbackUser = '';
+
     $scope.feedbackButton = function() {
       $window.location.href = '#/feedback';
     }
@@ -36,7 +39,7 @@ angular.module('starter.controllers', [])
 
       $http({
 
-        //url: 'http://192.168.1.12:5562/crmapi/createlead',
+        url: 'http://192.168.1.12:5562/crmapi/createlead',
         method: 'POST',
         data: form,
         headers: {'Content-Type': 'application/json'}
@@ -46,7 +49,9 @@ angular.module('starter.controllers', [])
 
         $ionicLoading.hide();
 
-        console.log(data, status);
+        //console.log(data, status);
+
+        $rootScope.callbackUser = data;
 
       }).error(function (data, status, header, config) {
 
@@ -102,7 +107,7 @@ angular.module('starter.controllers', [])
 
       $http({
 
-        //url: 'http://192.168.1.12:5562/crmapi/createlead',
+        url: 'http://192.168.1.12:5562/crmapi/createfeedback',
         method: 'POST',
         data: feedback,
         headers: {'Content-Type': 'application/json'}
@@ -129,6 +134,15 @@ angular.module('starter.controllers', [])
 
     $scope.startAgainButton = function() {
       $window.location.href = '#/lead';
+    }
+
+
+    $scope.nextSlide = function() {
+      $ionicSlideBoxDelegate.next();
+    }
+
+    $scope.previousSlide = function() {
+      $ionicSlideBoxDelegate.previous();
     }
 
 
