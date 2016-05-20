@@ -104,24 +104,19 @@ angular.module('starter.controllers', [])
         new_costofcurrentsystem: $scope.systemCost,
         new_howdoyoucurrentlypayforyoursystem: $scope.systemPayment,
         new_currentsystemcomments: $scope.systemNotes,
-
         new_followupdemo: $scope.demo,
         new_date1: $scope.date1,
         new_date2: $scope.date2,
-
         new_doyouliketheui: $scope.ui,
         new_uicomments: $scope.uiComments,
-
         new_didtheprocessmakesense: $scope.sense,
         new_processcomments: $scope.senseComments,
-
         new_anypartoftheprocessyouwouldntuse: $scope.process,
         new_notusedcomments: $scope.processComments,
-
         new_anyfeaturesyouwouldlikeadded: $scope.features,
         new_addedfeaturecomments: $scope.featuresComments,
-
         new_tabletsorphones: $scope.mobile,
+        new_leadid: $rootScope.callbackUser,
       }
 
       console.log(feedback);
@@ -138,7 +133,6 @@ angular.module('starter.controllers', [])
 
         $ionicLoading.hide();
         console.log(data, status);
-
         $scope.system = null;
         $scope.systemName = null;
         $scope.systemCost = null;
@@ -155,8 +149,8 @@ angular.module('starter.controllers', [])
         $scope.processComments = null;
         $scope.features = null;
         $scope.featuresComments = null;
-        scope.mobile = null;
-
+        $scope.mobile = null;
+        $rootScope.callbackUser = null;
         $window.location.href = '#/lead';
 
       }).error(function (data, status, header, config) {
