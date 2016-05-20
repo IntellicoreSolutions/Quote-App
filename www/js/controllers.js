@@ -52,6 +52,7 @@ angular.module('starter.controllers', [])
         //console.log(data, status);
 
         $rootScope.callbackUser = data;
+        $window.location.href = '#/feedback';
 
       }).error(function (data, status, header, config) {
 
@@ -62,12 +63,12 @@ angular.module('starter.controllers', [])
       });
 
       // Input Validation
-      if ($scope.topic == undefined) {
-        var alertPopup = $ionicPopup.alert({
-          title: 'Error',
-          template: 'Please fill in the topic'
-        });
-      }
+      // if ($scope.topic == undefined) {
+      //   var alertPopup = $ionicPopup.alert({
+      //     title: 'Error',
+      //     template: 'Please fill in the topic'
+      //   });
+      // }
     }
 
 
@@ -76,7 +77,9 @@ angular.module('starter.controllers', [])
     /////////////////////////////////////
 
     $scope.finish = function(){
-
+      $ionicLoading.show({
+        template: 'Loading...'
+      });
       var feedback = {
         new_doyouhaveasystemalready: $scope.system,
         new_whatisthecurrentsystemcalled: $scope.systemName,
@@ -116,13 +119,12 @@ angular.module('starter.controllers', [])
       }).success(function (data, status, header, config){
 
         $ionicLoading.hide();
-
         console.log(data, status);
+        $window.location.href = '#/lead';
 
       }).error(function (data, status, header, config) {
 
         $ionicLoading.hide();
-
         console.log(data, status);
 
       });
