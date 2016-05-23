@@ -1,312 +1,311 @@
 /* Empty. Add your own CSS if you like */
 @font-face {
-  font-family: 'Poiret One';
-  src: url('../fonts/PoiretOne-Regular.ttf');
+    font-family: 'Poiret One';
+    src: url('../fonts/PoiretOne-Regular.ttf');
 }
 
 body {
-  font-family: "Poiret One";
+    font-family: "Poiret One";
 }
 
 h1 {
-  color: #00b0b7;
-  font-weight: lighter;
-  font-family: "Poiret One";
-  font-size: 50px;
-  text-align: left;
-  margin-bottom: 30px;
+    color: #00b0b7;
+    font-weight: lighter;
+    font-family: "Poiret One";
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 .header_icon {
-  background: url('../img/IC-logo-main-bkg.png');
-  background-size: 100% auto !important;
-  background-repeat: no-repeat;
-  width: 170px;
-  height: 48px;
-  margin-top: 8px;
-  margin-left: 21px;
+    background: url('../img/IC-logo-main-bkg.png');
+    background-size: 100% auto !important;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 48px;
+    margin-top: 8px;
+    margin-left: 21px;
 }
 
 .app_background {
-  width: 100%;
-  /*height: calc(100% - 79px);*/
-  background: url('../img/app_background.jpg');
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  height: 100%;
-  /*top: 80px !important;*/
+    width: 100%;
+    /*height: calc(100% - 79px);*/
+    background: url('../img/app_background.jpg');
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    height: 100%;
+    /*top: 80px !important;*/
 }
 
 .header {
-  background: #fff !important;
-  height: 80px !important;
+    background: #fff !important;
+    height: 80px !important;
 }
 
 .button {
-  background: none;
-  border: 2px solid #00b0b7;
-  border-radius: 8px;
-  color: #00b0b7;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  min-width: 150px;
-  float: right;
+    background: none;
+    border: 2px solid #00b0b7;
+    border-radius: 8px;
+    color: #00b0b7;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    min-width: 150px;
+    float: right;
 }
 
 .form_input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: #464646;
-  border-radius: 5px;
-  color: #fff !important;
-  padding-left: 15px !important;
-  margin-bottom: 20px;
-  width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #464646;
+    border-radius: 5px;
+    color: #fff !important;
+    padding-left: 15px !important;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .form_dropdown {
-  background-color: #464646;
-  border-radius: 5px;
-  color: #fff !important;
-  padding-left: 15px !important;
-  margin-bottom: 20px;
-  width: 100%;
-  border: none;
-  padding-top: 6px;
-  padding-bottom: 6px;
+    background-color: #464646;
+    border-radius: 5px;
+    color: #fff !important;
+    padding-left: 15px !important;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .form_column_left {
-  float: left;
-  width: 30%;
+    float: left;
+    width: 30%;
 }
 
 .form_column_center {
-  display: inline-block;
-  width: 30%;
-  margin-left: 5%;
-  margin-right: 5%;
+    display: inline-block;
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .form_column_right {
-  float: right;
-  width: 30%;
+    float: right;
+    width: 30%;
 }
 
 .form_textarea {
-  background-color: #464646;
-  border-radius: 5px;
-  color: #fff !important;
-  width: 100%;
-  height: 150px;
-  max-width: 100%;
-  max-height: 150px;
-  margin-bottom: 20px;
-  padding-left: 15px;
-  padding-top: 10px;
+    background-color: #464646;
+    border-radius: 5px;
+    color: #fff !important;
+    width: 100%;
+    height: 150px;
+    max-width: 100%;
+    max-height: 150px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
 .lead_form, .feedback_form {
-  /*left: 50%;*/
-  /*position: absolute;*/
-  /*top: 50%;*/
-  /*width: 90%;*/
-  /*text-align: center;*/
-  /*-moz-transform: translate(-50%, -50%);*/
-  /*-webkit-transform: translate(-50%, -50%);*/
-  /*-o-transform: translate(-50%, -50%);*/
-  /*transform: translate(-50%, -50%);*/
+    /*left: 50%;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*width: 90%;*/
+    /*text-align: center;*/
+    /*-moz-transform: translate(-50%, -50%);*/
+    /*-webkit-transform: translate(-50%, -50%);*/
+    /*-o-transform: translate(-50%, -50%);*/
+    /*transform: translate(-50%, -50%);*/
 
-  width: 95%;
-  position: relative;
-  margin: auto;
-  padding-top: 90px;
-  display: table;
+    width: 95%;
+    position: relative;
+    margin: auto;
+    padding-top: 90px;
+    display: table;
 
-  min-height: 560px;
-
+    min-height: 560px;
 
 }
 
 .feedback_form .form_column_left, .feedback_form .form_column_right {
-  width: 45%;
+    width: 45%;
 }
 
 .button_area {
-  position: absolute;
-  bottom: -30px;
-  right: 0;
-  width: 200px;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 200px;
 }
 
 .bottom_none {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .feedback_form .form_textarea {
-  background-color: #464646;
-  border-radius: 5px;
-  color: #fff !important;
-  width: 100%;
-  height: 127px;
-  padding-left: 15px;
-  padding-top: 10px;
-  margin-bottom: 25px;
-  max-height: 127px;
-  max-width: 100%;
+    background-color: #464646;
+    border-radius: 5px;
+    color: #fff !important;
+    width: 100%;
+    height: 127px;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-bottom: 25px;
+    max-height: 127px;
+    max-width: 100%;
 }
 
 .form_label {
-  color: #fff;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-  text-align: left;
-  width: 100%;
-  display: block;
-  margin-bottom: 15px;
-  font-size: 14px;
+    color: #fff;
+    font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    text-align: left;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .scroll {
-  /*transform: none !important;*/
-  height: 100%;
+    /*transform: none !important;*/
+    height: 100%;
 }
 
 .custom_toggle {
-  background: none;
-  border: none !important;
-  height: 40px;
+    background: none;
+    border: none !important;
+    height: 40px;
 
 }
 
 .toggle input:checked + .track {
-  background-color: #00b0b7;
-  border-color: #00b0b7;
+    background-color: #00b0b7;
+    border-color: #00b0b7;
 }
 
 .select_label {
-  color:#fff;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-  width: auto;
-  font-size: 14px;
+    color: #fff;
+    font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    width: auto;
+    font-size: 14px;
 }
 
 .switch_container {
-  width: 100%;
-  float: left;
-  /*margin-bottom: 10px;*/
+    width: 100%;
+    float: left;
+    /*margin-bottom: 10px;*/
 }
 
 .switch_container .form_label {
-  width: auto;
-  float: left;
-  max-width: 70%;
+    width: auto;
+    float: left;
+    max-width: 70%;
 }
 
 .platform-ios .switch_container .form_label {
-  padding-top: 10px !important;
+    padding-top: 10px !important;
 }
 
 .switch_container .custom_toggle {
-  /*float: right;*/
-  float: left;
+    /*float: right;*/
+    float: left;
 }
 
 .date_container {
-  /*margin-top: 10px;*/
-  width: 45%;
-  float: left;
-  margin-right: 4%;
+    /*margin-top: 10px;*/
+    width: 45%;
+    float: left;
+    margin-right: 4%;
 }
 
 /*.slider-slide {*/
-  /*height: calc(100vh - 64px);*/
+/*height: calc(100vh - 64px);*/
 /*}*/
 
 .slider_background {
-  width: 100%;
-  height: 100%;
-  background: url('../img/app_background.jpg');
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
+    width: 100%;
+    height: 100%;
+    background: url('../img/app_background.jpg');
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
 
 }
 
 .item-toggle .toggle {
-  top: 4px !important;
+    top: 4px !important;
 }
 
 .item-toggle, .item-toggle.item-complex .item-content {
-  padding-right: 70px !important;
+    padding-right: 70px !important;
 }
 
 .slider-pager-page {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 .slider-pager-page.active {
-  color: #fff !important;
+    color: #fff !important;
 }
 
-
 .long-input-label {
-  display: block;
-  padding: 7px 10px 7px 0px;
-  max-width: none;
-  font-size: 14px;
-  overflow: hidden;
-  width: 247px !important;
-  white-space: normal;
-  text-align: left;
+    display: block;
+    padding: 7px 10px 7px 0px;
+    max-width: none;
+    font-size: 14px;
+    overflow: hidden;
+    width: 247px !important;
+    white-space: normal;
+    text-align: left;
 }
 
 .back_button {
-  position: absolute;
-  right: 2.5%;
-  top: 18px;
-  font-size: 18px !important;
-  border-color: #00b0b7 !important;
-  font-weight: bold !important;
-  padding: 5px 30px !important;
+    position: absolute;
+    right: 2.5%;
+    top: 18px;
+    font-size: 18px !important;
+    border-color: #00b0b7 !important;
+    font-weight: bold !important;
+    padding: 5px 30px !important;
 }
 
 .platform-ios .back_button {
-  top: 9px;
+    top: 9px;
 }
 
 .finish_button {
-  float:none;
-  position: absolute;
-  right: 2.5%;
-  bottom: 2.5%;
+    float: none;
+    position: absolute;
+    right: 2.5%;
+    bottom: 2.5%;
 }
 
 .next_button {
-  position: absolute;
-  right: 2.5%;
-  bottom: 3%;
-  font-family: "Poiret One";
-  border: none;
-  background-color: transparent !important;
-  padding: 0 !important;
-  width: auto;
-  min-width: auto;
+    position: absolute;
+    right: 2.5%;
+    bottom: 3%;
+    font-family: "Poiret One";
+    border: none;
+    background-color: transparent !important;
+    padding: 0 !important;
+    width: auto;
+    min-width: auto;
 }
+
 .next_button, .previous_button {
-  color: #00b0b7 !important;
+    color: #00b0b7 !important;
 }
 
 .previous_button {
-  position: absolute;
-  left: 2.5%;
-  bottom: 3%;
-  font-family: "Poiret One";
-  border: none;
-  background-color: transparent !important;
-  padding: 0 !important;
-  width: auto;
-  min-width: auto;
+    position: absolute;
+    left: 2.5%;
+    bottom: 3%;
+    font-family: "Poiret One";
+    border: none;
+    background-color: transparent !important;
+    padding: 0 !important;
+    width: auto;
+    min-width: auto;
 }

@@ -4,18 +4,18 @@ angular.module('starter.controllers', [])
 
     $rootScope.callbackUser = '';
 
+    ////////////////////////////////////////////////
+    // Lead page submit with redirect to feedback //
+    ////////////////////////////////////////////////
+
     $scope.feedbackButton = function() {
-      $window.location.href = '#/feedback';
-    }
-
-    /////////////////////////////////////
-    //Lead page submit without feedback /
-    /////////////////////////////////////
-
-    $scope.leadButtonFinish = function(){
       $ionicLoading.show({
         template: 'Loading...'
       });
+
+      $rootScope.name = $scope.firstName + " " + $scope.surname;
+      //alert($rootScope.name);
+
       var form = {
         topic: $scope.topic,
         firstName: $scope.firstName,
@@ -52,10 +52,9 @@ angular.module('starter.controllers', [])
         //console.log(data, status);
 
         $rootScope.callbackUser = data;
-
         $scope.topic = null;
-        $scope.firstName = null;
-        $scope.surname = null;
+        // $scope.firstName = null;
+        // $scope.surname = null;
         $scope.job = null;
         $scope.telephone = null;
         $scope.email = null;
@@ -90,6 +89,87 @@ angular.module('starter.controllers', [])
     }
 
 
+    ///////////////////////////////////////
+    // Lead page submit without feedback //
+    ///////////////////////////////////////
+
+    $scope.leadButtonFinish = function(){
+      $ionicLoading.show({
+        template: 'Loading...'
+      });
+
+      var form = {
+        topic: $scope.topic,
+        firstName: $scope.firstName,
+        lastName: $scope.surname,
+        jobTitle: $scope.job,
+        telephone: $scope.telephone,
+        email: $scope.email,
+        leadSource: $scope.lead,
+        company: $scope.company,
+        industry: $scope.industry,
+        website: $scope.website,
+        street: $scope.street,
+        postcode: $scope.postcode,
+        city: $scope.city,
+        employees: $scope.staff,
+        operatives: $scope.operatives,
+        notes: $scope.notes,
+      }
+
+      console.log(form);
+
+      $http({
+
+        url: 'http://192.168.1.12:5562/crmapi/createlead',
+        method: 'POST',
+        data: form,
+        headers: {'Content-Type': 'application/json'}
+
+
+      }).success(function (data, status, header, config){
+
+        $ionicLoading.hide();
+
+        //console.log(data, status);
+
+        $rootScope.callbackUser = null;
+        $scope.topic = null;
+        $scope.firstName = null;
+        $scope.surname = null;
+        $scope.job = null;
+        $scope.telephone = null;
+        $scope.email = null;
+        $scope.lead = null;
+        $scope.company = null;
+        $scope.industry = null;
+        $scope.website = null;
+        $scope.street = null;
+        $scope.postcode = null;
+        $scope.city = null;
+        $scope.staff = null;
+        $scope.operatives = null;
+        $scope.notes = null;
+
+        //$window.location.href = '#/feedback';
+
+      }).error(function (data, status, header, config) {
+
+        $ionicLoading.hide();
+        console.log(data, status);
+
+      });
+
+      // Input Validation
+      // if ($scope.topic == undefined) {
+      //   var alertPopup = $ionicPopup.alert({
+      //     title: 'Error',
+      //     template: 'Please fill in the topic'
+      //   });
+      // }
+    }
+
+
     /////////////////////////////////////
     //////// Feedback Page Submit ///////
     /////////////////////////////////////
@@ -98,7 +178,11 @@ angular.module('starter.controllers', [])
       $ionicLoading.show({
         template: 'Loading...'
       });
+
+      //alert($rootScope.name);
+
       var feedback = {
+        new_name: $rootScope.name,
         new_doyouhaveasystemalready: $scope.system,
         new_whatisthecurrentsystemcalled: $scope.systemName,
         new_costofcurrentsystem: $scope.systemCost,
@@ -162,12 +246,9 @@ angular.module('starter.controllers', [])
     }
 
 
-
-
     $scope.startAgainButton = function() {
       $window.location.href = '#/lead';
     }
-
 
     $scope.nextSlide = function() {
       $ionicSlideBoxDelegate.next();
