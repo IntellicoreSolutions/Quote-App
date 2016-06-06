@@ -1,0 +1,94 @@
+@media screen and (max-width: 768px ) {
+    .form_column_left {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+
+    .form_column_center {
+        width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .form_column_right {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .button_area {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .lead_button, .feedback_button {
+        width: 100%;
+    }
+
+    .bottom_none {
+        margin-bottom: 25px;
+    }
+
+    .lead_form, .feedback_form {
+        padding-top: 60px;
+    }
+
+    .feedback_form .form_column_left, .feedback_form .form_column_right {
+        width: 100%;
+    }
+
+    .scroll {
+        height: auto !important;
+        min-height: 100% !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    .header {
+        height: 60px !important;
+    }
+
+    .header_icon {
+        margin-left: 0;
+        margin-top: 5px;
+        width: 140px;
+    }
+
+    .lead_form, .feedback_form {
+        padding-top: 40px;
+    }
+
+    .back_button {
+        top: 8px
+    }
+
+    .button_area .button {
+        width: 100%;
+        margin-bottom: 55px;
+    }
+
+    .lead_button {
+        margin-bottom: 20px !important;
+    }
+
+    .next_button, .previous_button {
+        bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .long-input-label {
+        width: 55% !important;
+    }
+    .select_label {
+        white-space: normal;
+        width: 50%;
+    }
+}
