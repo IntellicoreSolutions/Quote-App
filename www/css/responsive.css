@@ -51,7 +51,7 @@
     }
 
     .header {
-        height: 60px !important;
+/*        height: 60px !important;*/
     }
 
     .header_icon {
@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 430px) {
     .long-input-label {
-        width: 55% !important;
+        width: 50% !important;
     }
     .select_label {
         white-space: normal;
