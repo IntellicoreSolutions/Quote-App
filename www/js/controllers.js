@@ -39,7 +39,8 @@ angular.module('starter.controllers', [])
 
       $http({
 
-        url: 'http://192.168.1.12:5562/crmapi/createlead',
+        //url: 'http://192.168.1.12:5562/crmapi/createlead',
+        url: 'http://' + $rootScope.ip + '/crmapi/createlead',
         method: 'POST',
         data: form,
         headers: {'Content-Type': 'application/json'}
@@ -121,7 +122,8 @@ angular.module('starter.controllers', [])
 
       $http({
 
-        url: 'http://192.168.1.12:5562/crmapi/createlead',
+        //url: 'http://192.168.1.12:5562/crmapi/createlead',
+        url: 'http://' + $rootScope.ip + '/crmapi/createlead',
         method: 'POST',
         data: form,
         headers: {'Content-Type': 'application/json'}
@@ -207,7 +209,8 @@ angular.module('starter.controllers', [])
 
       $http({
 
-        url: 'http://192.168.1.12:5562/crmapi/createfeedback',
+        //url: 'http://192.168.1.12:5562/crmapi/createfeedback',
+        url: 'http://' + $rootScope.ip + '/crmapi/createfeedback',
         method: 'POST',
         data: feedback,
         headers: {'Content-Type': 'application/json'}
