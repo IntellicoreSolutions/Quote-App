@@ -38,7 +38,6 @@ angular.module('starter.controllers', [])
       console.log(form);
 
       $http({
-
         //url: 'http://192.168.1.12:5562/crmapi/createlead',
         url: 'http://' + $rootScope.ip + '/crmapi/createlead',
         method: 'POST',
@@ -121,7 +120,6 @@ angular.module('starter.controllers', [])
       console.log(form);
 
       $http({
-
         //url: 'http://192.168.1.12:5562/crmapi/createlead',
         url: 'http://' + $rootScope.ip + '/crmapi/createlead',
         method: 'POST',
@@ -208,7 +206,6 @@ angular.module('starter.controllers', [])
       console.log(feedback);
 
       $http({
-
         //url: 'http://192.168.1.12:5562/crmapi/createfeedback',
         url: 'http://' + $rootScope.ip + '/crmapi/createfeedback',
         method: 'POST',
